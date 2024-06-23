@@ -17,6 +17,7 @@ networkx provides an interesting insight for homogenous (order = 1) chains, anyt
 - animation?
 
 3. sound generation
+- built simple audializer in pure data to better understand the generation
 - "prosthetic" for harmonium that records & plays the sequence
 - servos or solenoid?
     solenoid clicking on the harmonium keys could also provide "percussion"? (like guitar)
