@@ -11,7 +11,8 @@ how much should i train?
 - without enough training, the music produced would sound unguided and random
 
 code/inmarkov.ipynb does a mediocre job of generating new sequences
-need to explore paramteric "temperature" to generation to increase variance
+- added softmax normalization for finetuned control over multi-class selection
+- want to add ability to generate sequences that have not existed before, reasonably
 
 networkx provides an interesting insight for homogenous (order = 1) chains, anything more is incomprehensible
 - animation?
