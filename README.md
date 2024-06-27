@@ -12,7 +12,7 @@ how much should i train?
 
 code/inmarkov.ipynb does a mediocre job of generating new sequences
 - added softmax normalization for finetuned control over multi-class selection
-- want to add ability to generate sequences that have not existed before, reasonably
+- want to add ability to generate sequences that have not existed before, but reasonably
 
 networkx provides an interesting insight for homogenous (order = 1) chains, anything more is incomprehensible
 - animation?
