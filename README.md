@@ -1,24 +1,21 @@
-i've been learning music for over a decade. i want to teach a harmonium to play itself.
+## kala
 
-to-dos:
+i've been learning music for over a decade. i want to enable a machine to teach itself.
 
-1. clean up file structure - ongoing
+raags form the foundation for Indian classical music. it provides a framework for the notes used (which to emphasize and which to avoid), encoding a variety of moods and emotions.
 
-2. sequence-generation
-markov chains represent transition probabilites between different states. an inhomogenous markov chain could be "taught" vadi-samvadi and varjit rules from playback.
-how much should i train?
-- overfitting would probably cause the model to get stuck in small loops with little "exploration"
-- without enough training, the music produced would sound unguided and random
+Indian classical music is a tradition that is taught not from written media but rather by listening, reproducing and experimentation. 
+kala aims to replicate this by "training" a markov chain to learn raag yaman from training data and improvise on its own.
 
-code/inmarkov.ipynb does a mediocre job of generating new sequences
-- added softmax normalization for finetuned control over multi-class selection
-- want to add ability to generate sequences that have not existed before, but reasonably
+markov chains represent transition probabilites between different states in a sequence. an inhomogeneous Markov chain is a markov chain where the transition probabilities between states vary with more-than-one previous states in the sequence.
 
-networkx provides an interesting insight for homogenous (order = 1) chains, anything more is incomprehensible
-- animation?
+to tune the temperature of the output, a modified softmax normalization is used to tune the "improvisation".
 
-3. sound generation
-- built simple audializer in pure data to better understand the generation
-- "prosthetic" for harmonium that records & plays the sequence
-- servos or solenoid?
-    solenoid clicking on the harmonium keys could also provide "percussion"? (like guitar)
+a simple pure data patch is used to "audialaize" the output, communicated with over UDP.
+
+areas for growth:
+- increasing training data to more pieces of raag yaman, others raags
+- exploring the use of GPTs for generation
+- building a physical prosthetic for kala that allows it to interact with the physical world
+    learning by listening
+    producing using a speaker or physical instrument
